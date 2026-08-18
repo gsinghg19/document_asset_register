@@ -1,0 +1,4 @@
+pytest
+pydantic
+boto3
+playwright
