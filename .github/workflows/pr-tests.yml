@@ -24,6 +24,11 @@ jobs:
       - name: Run unit tests
         run: pytest assetRegister/test/unit -q
 
+      - name: Snyk
+        uses: snyk/actions/python@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+
       - name: Comment on failure
         if: failure()
         run: |
