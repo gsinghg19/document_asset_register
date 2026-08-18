@@ -19,9 +19,8 @@ date) from a React upload form.
   - `config.py` — env-driven settings (region, bucket name, table name).
 - `assetRegister/pipelines/provision_infra.py` — one-off script to create
   the S3 bucket and DynamoDB table (see below).
-- `assetRegister/test/` — `unit`/`integration` tests run against
-  [moto](https://github.com/getmoto/moto)-mocked AWS (no real AWS needed,
-  no cost); `E2E` drives the real frontend + backend with Playwright.
+- `assetRegister/test/` — see [its README](assetRegister/test/README.md) for
+  layout and how to run each layer.
 
 ## Setup
 
@@ -89,3 +88,5 @@ left on the PR noting the failure.
   bucket/table names into a `.env` (from `.env.example`).
 - Start the backend (`uvicorn assetRegister.src.publishAssetEntry:app --reload`)
   and frontend (`npm run dev` in `frontend/`).
+- Extend `pr-tests.yml` to also run `assetRegister/test/integration` (also
+  moto-mocked, no real AWS needed) as a required check.
