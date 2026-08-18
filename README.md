@@ -76,6 +76,12 @@ cd frontend && npx playwright install chromium   # first time only
 RUN_E2E=1 pytest assetRegister/test/E2E
 ```
 
+## Continuous integration
+
+`.github/workflows/pr-tests.yml` runs the unit tests on every pull request
+into `main`. If they pass, the PR is auto-merged; if they fail, a comment is
+left on the PR noting the failure.
+
 ## To do next
 
 - Get AWS credentials working (`aws configure` or `aws sso login`).
