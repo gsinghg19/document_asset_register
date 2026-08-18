@@ -1,0 +1,43 @@
+body {
+  font-family: system-ui, sans-serif;
+  max-width: 640px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  color: #1a1a1a;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.75rem;
+}
+
+.field label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.status.success {
+  color: #0a7d2c;
+}
+
+.status.error {
+  color: #b3261e;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.4rem 0.6rem;
+  border-bottom: 1px solid #ddd;
+}

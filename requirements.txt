@@ -2,3 +2,10 @@ pytest
 pydantic
 boto3
 playwright
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic-settings
+python-dotenv
+moto
+httpx2
