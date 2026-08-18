@@ -78,8 +78,10 @@ RUN_E2E=1 pytest assetRegister/test/E2E
 ## Continuous integration
 
 `.github/workflows/pr-tests.yml` runs the unit tests on every pull request
-into `main`. If they pass, the PR is auto-merged; if they fail, a comment is
-left on the PR noting the failure.
+into `main`. It's a required check (branch protection on `main`), so the
+merge button only becomes clickable once the tests pass — merging is still a
+manual action. If the tests fail, a comment is left on the PR noting the
+failure.
 
 ## To do next
 
